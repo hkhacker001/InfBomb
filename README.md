@@ -20,7 +20,7 @@ If output looks like `Python 3` - Congrats, Python 3 is installed properly.
 
 - Do not use this to harm others.
 - This script is only for educational purposes or to prank.
-- **Developer is not responsible for the misuse of TBomb.**
+- **Developer is not responsible for the misuse of InfBomb.**
 <br>
 
 ## Features:
