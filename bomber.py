@@ -52,20 +52,11 @@ def clr():
 
 def bann_text():
     clr()
-    logo = """
-   ████████ █████                 ██
-   ▒▒▒██▒▒▒ ██▒▒██                ██
-      ██    ██  ██        ██   ██ ██
-      ██    █████▒  ████  ███ ███ █████
-      ██    ██▒▒██ ██  ██ ██▒█▒██ ██▒▒██
-      ██    ██  ██ ██  ██ ██ ▒ ██ ██  ██
-      ██    █████▒ ▒████▒ ██   ██ █████▒
-      ▒▒    ▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒
-                                         """
+    logo = """ INFBOMB """
     if ASCII_MODE:
         logo = ""
-    version = "Version: "+__VERSION__
-    contributors = "Contributors: "+" ".join(__CONTRIBUTORS__)
+    version = "Version: 1.0"
+    contributors = "Made BY : Hari Krishna.G"
     print(random.choice(ALL_COLORS) + logo + RESET_ALL)
     mesgdcrt.SuccessMessage(version)
     mesgdcrt.SectionMessage(contributors)
@@ -74,7 +65,7 @@ def bann_text():
 
 def check_intr():
     try:
-        requests.get("https://motherfuckingwebsite.com")
+        requests.get("https://www.google.com")
     except Exception:
         bann_text()
         mesgdcrt.FailureMessage("Poor internet connection detected")
@@ -89,10 +80,10 @@ def format_phone(num):
 def do_zip_update():
     success = False
     if DEBUG_MODE:
-        zip_url = "https://github.com/Hackertrackersj/Tbomb/archive/refs/heads/master.zip"
+        zip_url = "https://github.com/hkhacker001/InfBomb/archive/refs/heads/master.zip"
         dir_name = "TBomb-dev"
     else:
-        zip_url = "https://github.com/Hackertrackersj/Tbomb/archive/refs/heads/master.zip"
+        zip_url = "https://github.com/hkhacker001/InfBomb/archive/refs/heads/master.zip"
         dir_name = "TBomb-master"
     print(ALL_COLORS[0]+"Downloading ZIP ... "+RESET_ALL)
     response = requests.get(zip_url)
@@ -154,7 +145,7 @@ def check_for_updates():
         return
     mesgdcrt.SectionMessage("Checking for updates")
     fver = requests.get(
-        "https://github.com/Hackertrackersj/Tbomb/blob/master/.version"
+        "https://github.com/hkhacker001/InfBomb/blob/master/.version"
     ).text.strip()
     if fver != __VERSION__:
         mesgdcrt.WarningMessage("An update is available")
@@ -168,9 +159,9 @@ def check_for_updates():
 def notifyen():
     try:
         if DEBUG_MODE:
-            url = "https://github.com/Hackertrackersj/Tbomb/blob/master/.notify"
+            url = "https://github.com/hkhacker001/InfBomb/blob/master/.notify"
         else:
-            url = "https://github.com/Hackertrackersj/Tbomb/blob/master/.notify"
+            url = "https://github.com/hkhacker001/InfBomb/blob/master/.notify"
         noti = requests.get(url).text.upper()
         if len(noti) > 10:
             mesgdcrt.SectionMessage("NOTIFICATION: " + noti)
@@ -223,7 +214,7 @@ def pretty_print(cc, target, success, failed):
     mesgdcrt.GeneralMessage("Failed       : " + str(failed))
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
-    mesgdcrt.SuccessMessage("TBomb was created by SpeedX")
+    mesgdcrt.SuccessMessage("InfBomb was created by Hari Krishna")
 
 
 def workernode(mode, cc, target, count, delay, max_threads):
@@ -290,12 +281,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 5000, "call": 1500, "mail": 2000}
+        max_limit = {"sms": 5000000000, "call": 3000000, "mail": 9999999}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 2500})
+                max_limit.update({"sms": 25888888})
         elif mode == "mail":
             target = get_mail_info()
         else:
@@ -344,7 +335,7 @@ def selectnode(mode="sms"):
 
 mesgdcrt = MessageDecorator("icon")
 if sys.version_info[0] != 3:
-    mesgdcrt.FailureMessage("TBomb will work only in Python v3")
+    mesgdcrt.FailureMessage("InfBomb will work only in Python v3")
     sys.exit()
 
 try:
@@ -354,7 +345,7 @@ except FileNotFoundError:
 
 
 __VERSION__ = get_version()
-__CONTRIBUTORS__ = ['SpeedX', 't0xic0der', 'scpketer', 'Stefan', 'Nitro Hacker']
+__CONTRIBUTORS__ = ['Hari Krishna']
 
 ALL_COLORS = [Fore.GREEN, Fore.RED, Fore.YELLOW, Fore.BLUE,
               Fore.MAGENTA, Fore.CYAN, Fore.WHITE]
@@ -363,32 +354,32 @@ RESET_ALL = Style.RESET_ALL
 ASCII_MODE = False
 DEBUG_MODE = False
 
-description = """TBomb - Your Friendly Spammer Application
+description = """InfBomb - Your Friendly Spammer Application
 
-TBomb can be used for many purposes which incudes -
+InfBomb can be used for many purposes which incudes -
 \t Exposing the vulnerable APIs over Internet
 \t Friendly Spamming
 \t Testing Your Spam Detector and more ....
 
-TBomb is not intented for malicious uses.
+InfBomb is not intented for malicious uses.
 """
 
 parser = argparse.ArgumentParser(description=description,
-                                 epilog='Coded by SpeedX !!!')
+                                 epilog='Coded by Hari Krishna!!!')
 parser.add_argument("-sms", "--sms", action="store_true",
-                    help="start TBomb with SMS Bomb mode")
+                    help="start InfBomb with SMS Bomb mode")
 parser.add_argument("-call", "--call", action="store_true",
-                    help="start TBomb with CALL Bomb mode")
+                    help="start InfBomb with CALL Bomb mode")
 parser.add_argument("-mail", "--mail", action="store_true",
-                    help="start TBomb with MAIL Bomb mode")
+                    help="start InfBomb with MAIL Bomb mode")
 parser.add_argument("-ascii", "--ascii", action="store_true",
                     help="show only characters of standard ASCII set")
 parser.add_argument("-u", "--update", action="store_true",
-                    help="update TBomb")
+                    help="update InfBomb")
 parser.add_argument("-c", "--contributors", action="store_true",
-                    help="show current TBomb contributors")
+                    help="show current InfBomb contributors")
 parser.add_argument("-v", "--version", action="store_true",
-                    help="show current TBomb version")
+                    help="show current InfBomb version")
 
 
 if __name__ == "__main__":
