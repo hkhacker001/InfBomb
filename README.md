@@ -1,4 +1,4 @@
-<h1 align="center">InfBomb v2.2</h1>
+<h1 align="center">InfBomb v1.0</h1>
 <p align="center">An open-source SMS/call bomber for Linux And Termux.</p><br>
 
 ## Note:
