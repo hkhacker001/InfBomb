@@ -50,10 +50,10 @@ To use the bomber type the following commands in Termux:
 ```
 pkg install git
 pkg install python
-git clone https://github.com/Hackertrackersj/Tbomb.git
-cd Tbomb
-chmod +x TBomb.sh
-./TBomb.sh
+git clone https://github.com/hkhacker001/InfBomb
+cd InfBomb
+chmod +x InfBomb.sh
+./InfBomb.sh
 ```
 
 ### > For Linux:
@@ -69,7 +69,7 @@ To use the bomber type the following commands in Linux terminal:
 ```
 sudo apt install git
 git clone https://github.com/hkhacker001/InfBomb
-cd TBomb
+cd InfBomb
 chmod +x InfBomb.sh
 sudo bash InfBomb.sh
 ```
@@ -96,9 +96,9 @@ chmod +x InfBomb.sh
 
 Toilet cannot be installed yet. But InfBomb does still work.
 
-# Run TBomb:
+# Run InfBomb:
 
-sudo bash TBomb.sh
+sudo bash InfBomb.sh
 ```
 
 
